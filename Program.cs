@@ -10,14 +10,7 @@ using System.Threading.Tasks;
 
 namespace Homework_Assignment_2
 {
-    class Transaction
-    {
-        internal enum TransactionType
-        {
-            Buy = -1,
-            Sell = 1
-        }
-    }
+   
     public class Program
     {
         static void Main(string[] args)
