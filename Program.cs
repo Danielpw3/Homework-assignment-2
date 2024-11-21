@@ -10,7 +10,12 @@ using System.Threading.Tasks;
 
 namespace Homework_Assignment_2
 {
-   
+    internal enum TransactionType
+    {
+        Buy = -1,
+        Sell = 1
+    }
+
     public class Program
     {
         static void Main(string[] args)
@@ -27,10 +32,11 @@ namespace Homework_Assignment_2
 
             var priceOrgiginal = 100;
 
+
             // Ternary operators
-            Transaction.TransactionType transactionType = transactionTypeInput.Equals("Buy")
-                ? Transaction.TransactionType.Buy
-                : Transaction.TransactionType.Sell;
+            TransactionType transactionType = transactionTypeInput.Equals("Buy")
+                ? TransactionType.Buy
+                : TransactionType.Sell;
 
             var profitLoss = transactionTypeInput.Equals("Sell")
                 ? (priceInput - priceOrgiginal) * nominalInput
